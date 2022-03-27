@@ -6,6 +6,7 @@ using AlephVault.Unity.Layout.Utils;
 using AlephVault.Unity.SpriteUtils.Types;
 using AlephVault.Unity.Support.Utils;
 using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
+using GameMeanMachine.Unity.WindRose.Types;
 using UnityEngine;
 using Animation = GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources.Animation;
 using Object = UnityEngine.Object;
@@ -42,7 +43,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 protected override MultiSettings<Animation> ValidateAndMap(SpriteGrid sourceGrid, MultiSettings<ReadOnlyCollection<Vector2Int>> selection)
                 {
                     MultiSettings<Animation> mapping = new MultiSettings<Animation>();
-                    foreach (KeyValuePair<string, ReadOnlyCollection<Vector2Int>> pair in selection)
+                    foreach (KeyValuePair<State, ReadOnlyCollection<Vector2Int>> pair in selection)
                     {
                         if (pair.Value == null) throw new ArgumentException(
                             $"A null value was given to the sprite list by key: {pair.Key}"

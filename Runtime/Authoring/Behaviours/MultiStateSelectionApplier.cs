@@ -5,6 +5,7 @@ using AlephVault.Unity.SpriteUtils.Types;
 using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals;
 using GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources;
 using GameMeanMachine.Unity.WindRose.SpriteUtils.Types;
+using GameMeanMachine.Unity.WindRose.Types;
 using UnityEngine;
 
 
@@ -35,9 +36,9 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 /// <returns>Whether all the states in the selection exist in the multi-state</returns>
                 protected override bool IsCompatible(SpriteGridSelection<MultiSettings<StateType>> selection)
                 {
-                    foreach (string key in selection.GetSelection().Keys)
+                    foreach (State state in selection.GetSelection().Keys)
                     {
-                        if (!multiState.HasState(key)) return false;
+                        if (!multiState.HasState(state)) return false;
                     }
 
                     return true;
@@ -52,10 +53,10 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 /// </exception>
                 protected override void BeforeUse(SpriteGridSelection<MultiSettings<StateType>> selection)
                 {
-                    foreach (string key in selection.GetSelection().Keys)
+                    foreach (State state in selection.GetSelection().Keys)
                     {
-                        if (!multiState.HasState(key)) throw new IncompatibleSelectionException(
-                            $"The given selection requires the state with name '{key}' to " +
+                        if (!multiState.HasState(state)) throw new IncompatibleSelectionException(
+                            $"The given selection requires the state with name '{state}' to " +
                             $"be present in the current visual object"
                         );
                     }
@@ -67,7 +68,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 /// <param name="selection">The selection to apply</param>
                 protected override void AfterUse(SpriteGridSelection<MultiSettings<StateType>> selection)
                 {
-                    foreach (KeyValuePair<string, StateType> item in selection.GetSelection())
+                    foreach (KeyValuePair<State, StateType> item in selection.GetSelection())
                     {
                         multiState.ReplaceState(item.Key, item.Value);
                     }
@@ -79,7 +80,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 /// <param name="selection">The selection being removed</param>
                 protected override void AfterRelease(SpriteGridSelection<MultiSettings<StateType>> selection)
                 {
-                    foreach (KeyValuePair<string, StateType> item in selection.GetSelection())
+                    foreach (KeyValuePair<State, StateType> item in selection.GetSelection())
                     {
                         multiState.ReplaceState(item.Key, default);
                     }

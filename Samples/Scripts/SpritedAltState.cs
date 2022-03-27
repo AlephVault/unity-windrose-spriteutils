@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
+using GameMeanMachine.Unity.WindRose.Types;
 using UnityEngine;
 
 
@@ -10,9 +11,11 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
     {
         public class SpritedAltState : SpriteBundle
         {
-            protected override string GetStateKey()
+            private static readonly State ALT_STATE = State.Get("alt");
+            
+            protected override State GetState()
             {
-                return "alt";
+                return ALT_STATE;
             }
         }
     }

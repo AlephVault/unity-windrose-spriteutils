@@ -46,7 +46,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 protected override MultiSettings<AnimationRose> ValidateAndMap(SpriteGrid sourceGrid, MultiSettings<RoseTuple<ReadOnlyCollection<Vector2Int>>> selection)
                 {
                     MultiSettings<AnimationRose> mapping = new MultiSettings<AnimationRose>();
-                    foreach (KeyValuePair<string, RoseTuple<ReadOnlyCollection<Vector2Int>>> pair in selection)
+                    foreach (KeyValuePair<State, RoseTuple<ReadOnlyCollection<Vector2Int>>> pair in selection)
                     {
                         if (pair.Value == null || pair.Value.Up == null || pair.Value.Left == null ||
                             pair.Value.Right == null || pair.Value.Down == null)

@@ -1,4 +1,5 @@
 using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
+using GameMeanMachine.Unity.WindRose.Types;
 using UnityEngine;
 
 
@@ -12,7 +13,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
             private float time = 0;
             private int index = 0;
             private MapObject mapObject;
-            private string[] states = { "", "alt" };
+            private State[] states = { State.Get(""), State.Get("alt") };
             
             private void Awake()
             {
@@ -22,7 +23,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
             // Start is called before the first frame update
             void Start()
             {
-                mapObject.CurrentStateKey = "";
+                mapObject.CurrentState = MapObject.IDLE_STATE;
             }
 
             // Update is called once per frame
@@ -34,8 +35,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                     time -= 4f;
                     index += 1;
                     if (index == states.Length) index = 0;
-                    Debug.Log($"Using state: {states[index]}");
-                    mapObject.CurrentStateKey = states[index];
+                    mapObject.CurrentState = states[index];
                 }
             }
         }

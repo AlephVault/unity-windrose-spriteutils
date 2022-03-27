@@ -35,7 +35,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 protected override MultiSettings<SpriteRose> ValidateAndMap(SpriteGrid sourceGrid, MultiSettings<RoseTuple<Vector2Int>> selection)
                 {
                     MultiSettings<SpriteRose> mapping = new MultiSettings<SpriteRose>();
-                    foreach (KeyValuePair<string, RoseTuple<Vector2Int>> pair in selection)
+                    foreach (KeyValuePair<State, RoseTuple<Vector2Int>> pair in selection)
                     {
                         if (pair.Value == null) throw new ArgumentException(
                             $"A null value was given to the sprite rose-tuple dictionary by key: {pair.Key}"

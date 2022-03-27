@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AlephVault.Unity.SpriteUtils.Types;
 using AlephVault.Unity.Support.Utils;
 using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
+using GameMeanMachine.Unity.WindRose.Types;
 using UnityEngine;
 
 
@@ -32,7 +33,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 protected override MultiSettings<Sprite> ValidateAndMap(SpriteGrid sourceGrid, MultiSettings<Vector2Int> selection)
                 {
                     MultiSettings<Sprite> mapping = new MultiSettings<Sprite>();
-                    foreach (KeyValuePair<string, Vector2Int> pair in selection)
+                    foreach (KeyValuePair<State, Vector2Int> pair in selection)
                     {
                         mapping[pair.Key] = ValidateAndMapSprite(sourceGrid, pair.Value);
                     }

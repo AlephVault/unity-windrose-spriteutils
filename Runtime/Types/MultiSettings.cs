@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using GameMeanMachine.Unity.WindRose.Types;
 
 
 namespace GameMeanMachine.Unity.WindRose.SpriteUtils
@@ -10,6 +11,6 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
         ///   A multi setting is a dictionary over string states and their contents.
         /// </summary>
         /// <typeparam name="T">The type to map</typeparam>
-        public class MultiSettings<T> : Dictionary<string, T> {}
+        public class MultiSettings<T> : Dictionary<State, T> {}
     }
 }

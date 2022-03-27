@@ -87,6 +87,9 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
 
             void UseGrid(int index)
             {
+                State idle = State.Get("");
+                State alt = State.Get("alt");
+                
                 IdentifiedSpriteGrid<int> spriteGrid = spriteGridPool.Get(index, () =>
                 {
                     return new Tuple<Texture2D, Rect?, uint, uint, float, Action, Action>(
@@ -121,30 +124,30 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 ), 2));
                 multiSpritedApplier.UseSelection(new MultiSpritedSelection(spriteGrid, new MultiSettings<Vector2Int>
                 {
-                    { "", new Vector2Int(2, 0) },
-                    { "alt", new Vector2Int(2, 2) },
+                    { idle, new Vector2Int(2, 0) },
+                    { alt, new Vector2Int(2, 2) },
                 }));
                 multiRoseSpritedApplier.UseSelection(new MultiRoseSpritedSelection(spriteGrid, new MultiSettings<RoseTuple<Vector2Int>>
                 {
-                    { "", new RoseTuple<Vector2Int>(
+                    { idle, new RoseTuple<Vector2Int>(
                         new Vector2Int(0, 0), new Vector2Int(1, 0), new Vector2Int(3, 0), new Vector2Int(2, 0)
                     )},
-                    { "alt", new RoseTuple<Vector2Int>(
+                    { alt, new RoseTuple<Vector2Int>(
                         new Vector2Int(0, 2), new Vector2Int(1, 2), new Vector2Int(3, 2), new Vector2Int(2, 2)
                     )},
                 }));
                 multiAnimatedApplier.UseSelection(new MultiAnimatedSelection(spriteGrid, new MultiSettings<ReadOnlyCollection<Vector2Int>>
                 {
-                    { "", Array.AsReadOnly(new [] {
+                    { idle, Array.AsReadOnly(new [] {
                         new Vector2Int(2, 0), new Vector2Int(2, 1)
                     })},
-                    { "alt", Array.AsReadOnly(new [] {
+                    { alt, Array.AsReadOnly(new [] {
                         new Vector2Int(2, 2), new Vector2Int(2, 3)
                     })},
                 }, 2));
                 multiRoseAnimatedApplier.UseSelection(new MultiRoseAnimatedSelection(spriteGrid, new MultiSettings<RoseTuple<ReadOnlyCollection<Vector2Int>>>
                 {
-                    { "", new RoseTuple<ReadOnlyCollection<Vector2Int>>(
+                    { idle, new RoseTuple<ReadOnlyCollection<Vector2Int>>(
                         Array.AsReadOnly(new []
                         {
                             new Vector2Int(0, 0), new Vector2Int(0, 1)
@@ -162,7 +165,7 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                             new Vector2Int(2, 0), new Vector2Int(2, 1)
                         })
                     )},
-                    { "alt", new RoseTuple<ReadOnlyCollection<Vector2Int>>(
+                    { alt, new RoseTuple<ReadOnlyCollection<Vector2Int>>(
                         Array.AsReadOnly(new []
                         {
                             new Vector2Int(0, 2), new Vector2Int(0, 3)
