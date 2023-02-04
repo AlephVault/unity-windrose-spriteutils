@@ -1,13 +1,13 @@
 {
   "name": "com.gamemeanmachine.unity.windrose.spriteutils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "displayName": "Game Mean Machine - Unity - WindRose SpriteUtils",
   "description": "Defines selections and appliers to pick certain sprites from a SpriteGrid into a certain type of WindRose visual state.",
   "unity": "2018.1",
   "dependencies": {
     "com.alephvault.unity.support": "0.0.2",
     "com.alephvault.unity.layout": "0.0.1",
-    "com.alephvault.unity.spriteutils": "0.0.3",
+    "com.alephvault.unity.spriteutils": "0.0.4",
     "com.gamemeanmachine.unity.windrose": "0.0.4"
   },
   "author": {
