@@ -92,8 +92,11 @@ namespace GameMeanMachine.Unity.WindRose.SpriteUtils
                 
                 IdentifiedSpriteGrid<int> spriteGrid = spriteGridPool.Get(index, () =>
                 {
-                    return new Tuple<Texture2D, Rect?, uint, uint, float, Action, Action>(
-                        textures[index], null, 32, 32, 32, null, null
+                    return new Tuple<Texture2D, Rect?, Size2D, Size2D, float, Action, Action>(
+                        textures[index], null,
+                        new Size2D { Width = 32, Height = 32 },
+                        new Size2D { Width = 0, Height = 0 },
+                        32, null, null
                     );
                 });
                 spritedApplier.UseSelection(new SpritedSelection(spriteGrid, new Vector2Int(2, 0)));
