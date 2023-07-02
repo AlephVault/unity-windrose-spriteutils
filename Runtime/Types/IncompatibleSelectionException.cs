@@ -1,7 +1,7 @@
 using AlephVault.Unity.Support.Types;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

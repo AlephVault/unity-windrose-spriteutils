@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using AlephVault.Unity.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

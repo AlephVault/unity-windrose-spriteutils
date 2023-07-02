@@ -5,14 +5,14 @@ using System.Linq;
 using AlephVault.Unity.Layout.Utils;
 using AlephVault.Unity.SpriteUtils.Types;
 using AlephVault.Unity.Support.Utils;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Visuals.StateBundles;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
-using Animation = GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources.Animation;
+using Animation = AlephVault.Unity.WindRose.Authoring.ScriptableObjects.VisualResources.Animation;
 using Object = UnityEngine.Object;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

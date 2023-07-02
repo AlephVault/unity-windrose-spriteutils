@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using AlephVault.Unity.Layout.Utils;
 using AlephVault.Unity.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.ScriptableObjects.VisualResources;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

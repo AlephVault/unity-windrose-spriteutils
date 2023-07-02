@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using AlephVault.Unity.SpriteUtils.Authoring.Types;
 using AlephVault.Unity.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Visuals;
-using GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources;
-using GameMeanMachine.Unity.WindRose.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Visuals;
+using AlephVault.Unity.WindRose.Authoring.ScriptableObjects.VisualResources;
+using AlephVault.Unity.WindRose.SpriteUtils.Types;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Authoring
     {

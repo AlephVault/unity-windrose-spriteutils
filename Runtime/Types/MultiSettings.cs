@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Types;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

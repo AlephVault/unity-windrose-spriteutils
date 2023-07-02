@@ -3,7 +3,7 @@ using AlephVault.Unity.SpriteUtils.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {

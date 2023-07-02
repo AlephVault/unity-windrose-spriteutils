@@ -2,15 +2,15 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using AlephVault.Unity.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
-using GameMeanMachine.Unity.WindRose.SpriteUtils.Authoring.Behaviours;
-using GameMeanMachine.Unity.WindRose.SpriteUtils.Types;
-using GameMeanMachine.Unity.WindRose.SpriteUtils.Types.Selectors;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
+using AlephVault.Unity.WindRose.SpriteUtils.Authoring.Behaviours;
+using AlephVault.Unity.WindRose.SpriteUtils.Types;
+using AlephVault.Unity.WindRose.SpriteUtils.Types.Selectors;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Samples
     {

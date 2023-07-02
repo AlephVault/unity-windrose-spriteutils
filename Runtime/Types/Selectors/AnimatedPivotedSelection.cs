@@ -6,11 +6,11 @@ using AlephVault.Unity.Layout.Utils;
 using AlephVault.Unity.SpriteUtils.Types;
 using AlephVault.Unity.Support.Utils;
 using UnityEngine;
-using Animation = GameMeanMachine.Unity.WindRose.Authoring.ScriptableObjects.VisualResources.Animation;
+using Animation = AlephVault.Unity.WindRose.Authoring.ScriptableObjects.VisualResources.Animation;
 using Object = UnityEngine.Object;
 
 
-namespace GameMeanMachine.Unity.WindRose.SpriteUtils
+namespace AlephVault.Unity.WindRose.SpriteUtils
 {
     namespace Types
     {
